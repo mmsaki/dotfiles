@@ -1,0 +1,30 @@
+# shift+cmd+, - reloads config file and applys changes
+# cmd+0 - resets window changes
+
+# updates
+auto-update = check
+
+# font - I like SF MONO & 14 or 24 screensharing
+font-family = "SF Mono"
+font-size = 14
+
+# theme
+# theme = light:GruvboxLightHard,dark:catppuccin-mocha
+theme = light:catppuccin-mocha,dark:catppuccin-mocha
+
+# window
+window-theme = auto
+window-inherit-font-size = true
+window-padding-balance = true
+window-padding-color = extend-always
+# fullscreen = true
+window-decoration = true
+window-width = 1920
+window-height = 1080
+window-save-state = always
+confirm-close-surface = false
+
+# macos
+macos-option-as-alt = false
+# macos-titlebar-style = hidden
+macos-titlebar-style = tabs
