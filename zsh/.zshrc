@@ -36,12 +36,6 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.bun/bin:$PATH
 export PATH=~/.yarn/bin:$PATH
 export PATH=~/.huff/bin:$PATH
-export PATH=~/.nargo/bin:$PATH
-export PATH=~/.rvm/bin:$PATH
-export PATH=~/.deno/env:$PATH
-
-# yarn
-export PATH="$PATH:$(yarn global bin)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
