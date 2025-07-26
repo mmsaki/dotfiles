@@ -12,6 +12,7 @@ GPG installed with `brew install gnupg` or run:
 Github [locs](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key) on generating GPG key
 
 1. Generate key:
+
     ```sh
     gpg --full-generate-key
     ```
@@ -24,11 +25,13 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     > - Use TAB to go to next line to repeat password
 
 1. List keys:
+
     ```sh
     gpg --list-secret-keys --keyid-format=long
     ```
 
 1. Export key to github:
+
     ```sh
     gpg --armor --export D0C364EC7D319FCE
     ```
@@ -36,6 +39,11 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     > - Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
     > - [Add the GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
 1. Add sign key to `.gitconfig`
+
     ```sh
     git config --global user.signingkey D0C364EC7D319FCE
     ```
+
+## Other Walkthroigh
+
+- [Using GPG- Methods of Signing Git Commits on MacOS](https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e?permalink_comment_id=3660126)
