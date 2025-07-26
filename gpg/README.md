@@ -4,7 +4,7 @@ GPG installed with `brew install gnupg` or run:
 
 ```sh
 # run script inside gpg/install.sh
-.install.sh
+./install.sh
 ```
 
 ## Generating Create key
