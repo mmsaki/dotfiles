@@ -1,60 +1,44 @@
 # Dotfiles
 
-## Intalls
+My dotfiles.
 
-- Install homebrew
+## Installs
 
-    ```sh
-    homebrew/install.sh
-    ```
-- Install stow
-    > Used for symlynking dotfiles
+Install scripts for specific tools
 
-    ```sh
-    stow/install.sh
-    ```
+```sh
+# homebrew
+homebrew/install.sh
 
-- Install ghostty
+# stow (symlink tool)
+stow/install.sh
 
-    ```sh
-    ghostty/.config/ghostty/install.sh
-    ```
+# ghostty
+ghostty/.config/ghostty/install.sh
 
-- Install gpg
+# gpg
+gpg/install.sh
 
-    ```sh
-    gpg/install.sh
+# python tools
+python/install.sh
+python/uv.sh
 
-    ```
-- Install python dev tools
+# node tools
+nodejs/install.sh
+nodejs/bun.sh
+nodejs/pnpm.sh
+nodejs/yarn.sh
+nodejs/typescript.sh
 
-    ```sh
-    python/install.sh
-    python/uv.sh
-
-    ```
-- Install javascript dev tools
-
-    ```sh
-    nodejs/install.sh
-    nodejs/bun.sh
-    nodejs/pnpm.sh
-    nodejs/yarn.sh
-    nodejs/typescript.sh
-
-    ```
-- Install solidity dev tools
-    ```sh
-    solidity/install.sh
-    solidity/foundry.sh
-    solidity/huff.sh
-    ```
+# solidity tools
+solidity/install.sh
+solidity/foundry.sh
+solidity/huff.sh
+```
 
 ## Symlinking dotfiles
 
-Inside dotfiles directory:
-
-- Symlink zsh, git, nvim, ghostty
+Symlink zsh, git, nvim, ghostty to `$HOME` directory
 
 ```sh
 stow zsh
