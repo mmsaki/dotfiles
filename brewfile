@@ -1,0 +1,16 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+
+brew 'wget'
+brew 'yt-dlp'
+brew 'ffmpeg'
+
+cask 'discord'
+cask 'docker'
+cask 'google-chrome'
+cask 'telegram'
+cask 'typefully'
+cask 'vlc'
+cask 'whatsapp'
+cask 'zoom'

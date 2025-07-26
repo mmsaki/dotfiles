@@ -36,6 +36,19 @@ solidity/foundry.sh
 solidity/huff.sh
 ```
 
+## GUI Applications MacOS
+
+Installs discord, docker, google-chrome, telegram, typefully, vlc, whatsapp, zoom
+
+>[!NOTE]
+>
+> - See [`brewfile`](./brewfile) for application list
+> - See [Homebrew github casks](https://github.com/Homebrew/homebrew-cask) for other apps.
+
+```sh
+brew bundle
+```
+
 ## Symlinking dotfiles
 
 Symlink zsh, git, nvim, ghostty to `$HOME` directory
