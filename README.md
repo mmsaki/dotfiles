@@ -24,14 +24,14 @@ python/install.sh
 python/uv.sh
 
 # node tools
-nodejs/install.sh
+nodejs/install.sh # (installs nvm with node v22)
 nodejs/bun.sh
 nodejs/pnpm.sh
 nodejs/yarn.sh
 nodejs/typescript.sh
 
 # solidity tools
-solidity/install.sh
+solidity/install.sh # (installs solc-select)
 solidity/foundry.sh
 solidity/huff.sh
 ```
