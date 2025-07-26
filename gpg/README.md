@@ -44,6 +44,6 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     git config --global user.signingkey D0C364EC7D319FCE
     ```
 
-## Other Walkthroigh
+## Resources
 
 - [Using GPG- Methods of Signing Git Commits on MacOS](https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e?permalink_comment_id=3660126)
