@@ -1,0 +1,23 @@
+[user]
+	name = Meek Msaki
+	email = meek10x@gmail.com
+	signingkey = E73D40D3DE6D97EF
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
+[http]
+	postBuffer = 157286400
+[core]
+	editor = nvim
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[gpg]
+	program = gpg
