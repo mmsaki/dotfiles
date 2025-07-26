@@ -16,7 +16,7 @@ alias vim=nvim
 alias ls="ls --color -G"
 alias l="ls --color -G -la"
 alias clear='printf "\033c"'
-alias python="uv run python"
+alias python="python3"
 
 # git
 alias ga="git add"
