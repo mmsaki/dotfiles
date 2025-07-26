@@ -17,12 +17,13 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     ```
 
     > [!TIP]
-    > Choose ECDSA or ECC (sign and encrypt)
-    > Choose length key should be valid
-    > Add real name
-    > Add email (same email as github user)
-    > Create password
-    > Use TAB to go to next line to repeat password
+    >
+    > - Choose ECDSA or ECC (sign and encrypt)
+    > - Choose length key should be valid
+    > - Add real name
+    > - Add email (same email as github user)
+    > - Create password
+    > - Use TAB to go to next line to repeat password
 
 1. List keys:
     ```sh
@@ -34,9 +35,10 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     ```sh
     gpg --armor --export D0C364EC7D319FCE
     ```
+
     > [!TIP]
-    > Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
-    > [Add the GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
+    > - Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
+    > - [Add the GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
 1. Add sign key to `.gitconfig`
     ```sh
     git config --global user.signingkey D0C364EC7D319FCE
