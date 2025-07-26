@@ -16,7 +16,7 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     gpg --full-generate-key
     ```
 
-    > [!TIP]
+    > [!NOTE]
     >
     > - Choose ECDSA or ECC (sign and encrypt)
     > - Choose length key should be valid
@@ -36,7 +36,7 @@ Github [locs](https://docs.github.com/en/authentication/managing-commit-signatur
     gpg --armor --export D0C364EC7D319FCE
     ```
 
-    > [!TIP]
+    > [!NOTE]
     > - Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
     > - [Add the GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account)
 1. Add sign key to `.gitconfig`
