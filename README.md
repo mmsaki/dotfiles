@@ -36,7 +36,7 @@ solidity/foundry.sh
 solidity/huff.sh
 ```
 
-## GUI Applications MacOS
+## Applications MacOS
 
 Installs discord, docker, google-chrome, telegram, typefully, vlc, whatsapp, zoom
 
