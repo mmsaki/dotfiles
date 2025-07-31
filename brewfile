@@ -16,6 +16,8 @@ brew 'stylua'
 brew 'markdownlint-cli2'
 brew 'markdown-oxide'
 brew 'rust-analyzer'
+# toml formatter
+brew 'taplo'
 
 cask 'discord'
 cask 'docker'
