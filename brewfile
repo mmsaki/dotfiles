@@ -18,6 +18,7 @@ brew 'markdown-oxide'
 brew 'rust-analyzer'
 # toml formatter
 brew 'taplo'
+brew 'neovide'
 
 cask 'discord'
 cask 'docker'
