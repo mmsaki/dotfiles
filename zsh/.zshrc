@@ -10,9 +10,9 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
-alias v=neovide
-alias vi=neovide
-alias vim=neovide
+alias v=nvim
+alias vi=nvim
+alias vim=nvim
 alias ls="ls --color -G"
 alias l="ls --color -G -la"
 alias clear='printf "\033c"'
