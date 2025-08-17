@@ -19,6 +19,8 @@ brew 'rust-analyzer'
 # toml formatter
 brew 'taplo'
 brew 'neovide'
+brew 'imagemagick'
+brew 'graphviz'
 
 cask 'discord'
 cask 'docker'
