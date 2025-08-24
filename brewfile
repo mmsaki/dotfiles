@@ -16,8 +16,9 @@ brew 'stylua'
 brew 'markdownlint-cli2'
 brew 'markdown-oxide'
 brew 'rust-analyzer'
-# toml formatter
-brew 'taplo'
+brew 'echidna'
+brew 'go'
+brew 'taplo' # toml formatter
 brew 'neovide'
 brew 'imagemagick'
 brew 'graphviz'
