@@ -21,7 +21,6 @@ gpg/install.sh
 
 # python tools
 python/install.sh
-python/uv.sh
 
 # node tools
 nodejs/install.sh # (installs nvm with node v22)
