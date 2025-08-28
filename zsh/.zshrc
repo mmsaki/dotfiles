@@ -42,7 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # bun completions
-[ -s "/Users/meekmsaki/.bun/_bun" ] && source "/Users/meekmsaki/.bun/_bun"
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
 # pgp
 export GPG_TTY=$(tty)
