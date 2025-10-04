@@ -33,6 +33,7 @@ brew 'ruff'
 brew 'solidity'
 brew 'solc-select'
 brew 'gh'
+brew 'opencode'
 
 cask 'discord'
 cask 'docker-desktop'
