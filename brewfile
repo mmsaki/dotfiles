@@ -32,6 +32,7 @@ brew 'keyring'
 brew 'ruff'
 brew 'solidity'
 brew 'solc-select'
+brew 'gh'
 
 cask 'discord'
 cask 'docker-desktop'

@@ -1,7 +1,7 @@
 [user]
 	name = Meek Msaki
 	email = meek10x@gmail.com
-	signingkey = D0C364EC7D319FCE
+	signingkey = C31EA7FE10871520
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
