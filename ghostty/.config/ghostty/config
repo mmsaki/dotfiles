@@ -6,7 +6,7 @@ auto-update = check
 
 # font - I like SF MONO & 14 or 24 screensharing
 font-family = "SF Mono"
-font-size = 18
+font-size = 14
 
 # theme
 # theme = light:GruvboxLightHard,dark:catppuccin-mocha
