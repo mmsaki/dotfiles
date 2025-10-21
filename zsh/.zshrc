@@ -49,3 +49,8 @@ export GPG_TTY=$(tty)
 
 # opencode
 export PATH=/Users/meek/.opencode/bin:$PATH
+
+# persist virtual env
+if [ -f "./.venv/bin/activate" ]; then
+  source "./.venv/bin/activate"
+fi
