@@ -31,3 +31,5 @@ macos-titlebar-style = tabs
 
 ## cursor animation
 custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/water.glsl
+custom-shader = shaders/custom.glsl
