@@ -28,6 +28,7 @@ brew 'rust-analyzer'
 brew 'solc-select'
 brew 'solidity'
 brew 'stylua'
+brew 'tree-sitter'
 brew 'tailwindcss-language-server'
 brew 'taplo' # toml formatter
 brew 'tree'
