@@ -20,9 +20,9 @@ alias python="python3"
 
 # git
 alias ga="git add"
-alias gs="git status"
 alias gc="git commit"
 alias gch="git checkout"
+alias gs="git status"
 alias gp="git push origin"
 alias gr="git pull --rebase origin"
 alias gb="git branch"
@@ -36,6 +36,7 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.bun/bin:$PATH
 export PATH=~/.yarn/bin:$PATH
 export PATH=~/.huff/bin:$PATH
+export PATH=~/.volta/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
