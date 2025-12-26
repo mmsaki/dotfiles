@@ -1,4 +1,4 @@
-# shift+cmd+, - reloads config file and applys changes
+# shift+cmd+, - reloads config file and appyls changes
 # cmd+0 - resets window changes
 
 # updates
@@ -33,3 +33,4 @@ macos-titlebar-style = tabs
 custom-shader = shaders/cursor_smear.glsl
 # custom-shader = shaders/water.glsl
 # custom-shader = shaders/custom.glsl
+keybind = shift+enter=text:\x1b\r
