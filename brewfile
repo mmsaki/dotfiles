@@ -34,6 +34,7 @@ brew 'taplo' # toml formatter
 brew 'tree'
 brew 'twine'
 brew 'typescript-language-server'
+brew 'typos-lsp'
 brew 'uv'
 brew 'vscode-langservers-extracted'
 brew 'wget'
