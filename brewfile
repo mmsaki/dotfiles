@@ -39,6 +39,7 @@ brew 'uv'
 brew 'vscode-langservers-extracted'
 brew 'wget'
 brew 'yt-dlp'
+brew 'zls'
 
 cask 'discord'
 cask 'docker-desktop'
