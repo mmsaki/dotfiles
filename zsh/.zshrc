@@ -55,3 +55,11 @@ export PATH=/Users/meek/.opencode/bin:$PATH
 if [ -f "./.venv/bin/activate" ]; then
   source "./.venv/bin/activate"
 fi
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+. "/Users/meek/.deno/env"
+export PATH="/opt/homebrew/bin:$PATH"
+
+# completions
+fpath=(~/.zsh/completions $fpath)
+autoload -Uz compinit
+compinit
