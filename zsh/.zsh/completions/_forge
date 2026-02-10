@@ -51,7 +51,6 @@ never\:"Force disable color output"))' \
 '--dump=[Dumps all debugger steps to file]:PATH:_files' \
 '--gas-snapshot-check=[Check gas snapshots against previous runs]:GAS_SNAPSHOT_CHECK:(true false)' \
 '--gas-snapshot-emit=[Enable/disable recording of gas snapshot results]:GAS_SNAPSHOT_EMIT:(true false)' \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
 '--fuzz-seed=[Set seed used to generate randomness during your fuzz runs]:FUZZ_SEED:_default' \
 '--fuzz-runs=[]:RUNS:_default' \
@@ -93,6 +92,7 @@ never\:"Force disable color output"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -193,7 +193,6 @@ never\:"Force disable color output"))' \
 '--dump=[Dumps all debugger steps to file]:PATH:_files' \
 '--gas-snapshot-check=[Check gas snapshots against previous runs]:GAS_SNAPSHOT_CHECK:(true false)' \
 '--gas-snapshot-emit=[Enable/disable recording of gas snapshot results]:GAS_SNAPSHOT_EMIT:(true false)' \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
 '--fuzz-seed=[Set seed used to generate randomness during your fuzz runs]:FUZZ_SEED:_default' \
 '--fuzz-runs=[]:RUNS:_default' \
@@ -235,6 +234,7 @@ never\:"Force disable color output"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -372,6 +372,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--cache-path=[The path to the compiler cache]:PATH:_files -/' \
 '*--lib-paths=[The path to the library folder]:PATH:_files -/' \
 '--config-path=[Path to the config file]:FILE:_files' \
+'-i+[Open an interactive prompt to enter your private key]:NUM:_default' \
 '--interactives=[Open an interactive prompt to enter your private key]:NUM:_default' \
 '*--private-keys=[Use the provided private keys]:RAW_PRIVATE_KEYS:_default' \
 '(--private-keys)--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -407,6 +408,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -450,8 +452,6 @@ custom\:"Custom verification provider, requires compatibility with the Etherscan
 '--ast[Includes the AST as JSON in the compiler output]' \
 '(-C --contracts)--hardhat[Use the Hardhat-style project layout]' \
 '(-C --contracts)--hh[Use the Hardhat-style project layout]' \
-'(--interactives)-i[Open an interactive prompt to enter your private key]' \
-'(--interactives)--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
 '--ledger[Use a Ledger hardware wallet]' \
 '-t[Use a Trezor hardware wallet]' \
@@ -491,7 +491,6 @@ never\:"Force disable color output"))' \
 '--dump=[Dumps all debugger steps to file]:PATH:_files' \
 '--gas-snapshot-check=[Check gas snapshots against previous runs]:GAS_SNAPSHOT_CHECK:(true false)' \
 '--gas-snapshot-emit=[Enable/disable recording of gas snapshot results]:GAS_SNAPSHOT_EMIT:(true false)' \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
 '--fuzz-seed=[Set seed used to generate randomness during your fuzz runs]:FUZZ_SEED:_default' \
 '--fuzz-runs=[]:RUNS:_default' \
@@ -533,6 +532,7 @@ never\:"Force disable color output"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -1448,7 +1448,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
@@ -1570,7 +1570,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
@@ -1659,8 +1659,6 @@ _arguments "${_arguments_options[@]}" : \
 '--template=[The template to start from]:TEMPLATE:_default' \
 '-b+[Branch argument that can only be used with template option. If not specified, the default branch is used]:BRANCH:_default' \
 '--branch=[Branch argument that can only be used with template option. If not specified, the default branch is used]:BRANCH:_default' \
-'(--vyper -t --template)-n+[Initialize a project template for the specified network in Foundry]:NETWORK:(tempo)' \
-'(--vyper -t --template)--network=[Initialize a project template for the specified network in Foundry]:NETWORK:(tempo)' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
 never\:"Force disable color output"))' \
@@ -1883,7 +1881,6 @@ never\:"Force disable color output"))' \
 '--dump=[Dumps all debugger steps to file]:PATH:_files' \
 '--gas-snapshot-check=[Check gas snapshots against previous runs]:GAS_SNAPSHOT_CHECK:(true false)' \
 '--gas-snapshot-emit=[Enable/disable recording of gas snapshot results]:GAS_SNAPSHOT_EMIT:(true false)' \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
 '--fuzz-seed=[Set seed used to generate randomness during your fuzz runs]:FUZZ_SEED:_default' \
 '--fuzz-runs=[]:RUNS:_default' \
@@ -1925,6 +1922,7 @@ never\:"Force disable color output"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -2038,7 +2036,6 @@ never\:"Force disable color output"))' \
 '--dump=[Dumps all debugger steps to file]:PATH:_files' \
 '--gas-snapshot-check=[Check gas snapshots against previous runs]:GAS_SNAPSHOT_CHECK:(true false)' \
 '--gas-snapshot-emit=[Enable/disable recording of gas snapshot results]:GAS_SNAPSHOT_EMIT:(true false)' \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
 '--fuzz-seed=[Set seed used to generate randomness during your fuzz runs]:FUZZ_SEED:_default' \
 '--fuzz-runs=[]:RUNS:_default' \
@@ -2080,6 +2077,7 @@ never\:"Force disable color output"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -2229,6 +2227,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
@@ -2335,6 +2334,7 @@ notes\:"Exit with a non-zero code if any notes or warnings are found"))' \
 '--block-number=[The block number]:BLOCK:_default' \
 '--block-difficulty=[The block difficulty]:DIFFICULTY:_default' \
 '--block-prevrandao=[The block prevrandao value. NOTE\: Before merge this field was mix_hash]:PREVRANDAO:_default' \
+'--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--block-gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--gas-limit=[The block gas limit]:BLOCK_GAS_LIMIT:_default' \
 '--memory-limit=[The memory limit per EVM execution in bytes. If this limit is exceeded, a \`MemoryLimitOOG\` result is thrown]:MEMORY_LIMIT:_default' \
@@ -3230,7 +3230,6 @@ never\:"Force disable color output"))' \
 ;;
 (cache)
 _arguments "${_arguments_options[@]}" : \
-'--extra-abis-path=[Path to a folder containing additional abis to include in the cache]:EXTRA_ABIS_PATH:_default' \
 '--root=[The project'\''s root path]:PATH:_files -/' \
 '-C+[The contracts source directory]:PATH:_files -/' \
 '--contracts=[The contracts source directory]:PATH:_files -/' \
@@ -3260,7 +3259,6 @@ never\:"Force disable color output"))' \
 ;;
 (c)
 _arguments "${_arguments_options[@]}" : \
-'--extra-abis-path=[Path to a folder containing additional abis to include in the cache]:EXTRA_ABIS_PATH:_default' \
 '--root=[The project'\''s root path]:PATH:_files -/' \
 '-C+[The contracts source directory]:PATH:_files -/' \
 '--contracts=[The contracts source directory]:PATH:_files -/' \
@@ -3666,7 +3664,6 @@ never\:"Force disable color output"))' \
 ;;
 (cache)
 _arguments "${_arguments_options[@]}" : \
-'--extra-abis-path=[Path to a folder containing additional abis to include in the cache]:EXTRA_ABIS_PATH:_default' \
 '--root=[The project'\''s root path]:PATH:_files -/' \
 '-C+[The contracts source directory]:PATH:_files -/' \
 '--contracts=[The contracts source directory]:PATH:_files -/' \
@@ -3696,7 +3693,6 @@ never\:"Force disable color output"))' \
 ;;
 (c)
 _arguments "${_arguments_options[@]}" : \
-'--extra-abis-path=[Path to a folder containing additional abis to include in the cache]:EXTRA_ABIS_PATH:_default' \
 '--root=[The project'\''s root path]:PATH:_files -/' \
 '-C+[The contracts source directory]:PATH:_files -/' \
 '--contracts=[The contracts source directory]:PATH:_files -/' \

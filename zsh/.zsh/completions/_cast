@@ -2094,13 +2094,17 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -2159,13 +2163,17 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -2224,13 +2232,17 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -2284,12 +2296,27 @@ _arguments "${_arguments_options[@]}" : \
 '--from-block=[The block height to start query at]:FROM_BLOCK:_default' \
 '--to-block=[The block height to stop query at]:TO_BLOCK:_default' \
 '*--address=[The contract address to filter on]:ADDRESS:_default' \
-'--query-size=[Number of blocks to query in each chunk when the provider has range limits. Defaults to 10000 blocks per chunk]:QUERY_SIZE:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'-f+[The sender account]:ADDRESS:_default' \
+'--from=[The sender account]:ADDRESS:_default' \
+'--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
+'--mnemonic=[Use the mnemonic phrase of mnemonic file at the specified path]:MNEMONIC:_default' \
+'--mnemonic-passphrase=[Use a BIP39 passphrase for the mnemonic]:PASSPHRASE:_default' \
+'--mnemonic-derivation-path=[The wallet derivation path]:PATH:_default' \
+'(--mnemonic-derivation-path)--mnemonic-index=[Use the private key from the given mnemonic index]:INDEX:_default' \
+'--keystore=[Use the keystore in the given folder or file]:PATH:_default' \
+'(--keystore)--account=[Use a keystore from the default keystores folder (~/.foundry/keystores) by its filename]:ACCOUNT_NAME:_default' \
+'--password=[The keystore password]:PASSWORD:_default' \
+'--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
+'--browser-port=[Port for the browser wallet server]:PORT:_default' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
 never\:"Force disable color output"))' \
@@ -2300,6 +2327,18 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
+'-i[Open an interactive prompt to enter your private key]' \
+'--interactive[Open an interactive prompt to enter your private key]' \
+'-l[Use a Ledger hardware wallet]' \
+'--ledger[Use a Ledger hardware wallet]' \
+'-t[Use a Trezor hardware wallet]' \
+'--trezor[Use a Trezor hardware wallet]' \
+'--aws[Use AWS Key Management Service]' \
+'--gcp[Use Google Cloud Key Management Service]' \
+'--turnkey[Use Turnkey]' \
+'--browser[Use a browser wallet]' \
+'--browser-disable-open[Whether to open the browser for wallet connection]' \
+'--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -2317,12 +2356,27 @@ _arguments "${_arguments_options[@]}" : \
 '--from-block=[The block height to start query at]:FROM_BLOCK:_default' \
 '--to-block=[The block height to stop query at]:TO_BLOCK:_default' \
 '*--address=[The contract address to filter on]:ADDRESS:_default' \
-'--query-size=[Number of blocks to query in each chunk when the provider has range limits. Defaults to 10000 blocks per chunk]:QUERY_SIZE:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'-f+[The sender account]:ADDRESS:_default' \
+'--from=[The sender account]:ADDRESS:_default' \
+'--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
+'--mnemonic=[Use the mnemonic phrase of mnemonic file at the specified path]:MNEMONIC:_default' \
+'--mnemonic-passphrase=[Use a BIP39 passphrase for the mnemonic]:PASSPHRASE:_default' \
+'--mnemonic-derivation-path=[The wallet derivation path]:PATH:_default' \
+'(--mnemonic-derivation-path)--mnemonic-index=[Use the private key from the given mnemonic index]:INDEX:_default' \
+'--keystore=[Use the keystore in the given folder or file]:PATH:_default' \
+'(--keystore)--account=[Use a keystore from the default keystores folder (~/.foundry/keystores) by its filename]:ACCOUNT_NAME:_default' \
+'--password=[The keystore password]:PASSWORD:_default' \
+'--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
+'--browser-port=[Port for the browser wallet server]:PORT:_default' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
 never\:"Force disable color output"))' \
@@ -2333,6 +2387,18 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
+'-i[Open an interactive prompt to enter your private key]' \
+'--interactive[Open an interactive prompt to enter your private key]' \
+'-l[Use a Ledger hardware wallet]' \
+'--ledger[Use a Ledger hardware wallet]' \
+'-t[Use a Trezor hardware wallet]' \
+'--trezor[Use a Trezor hardware wallet]' \
+'--aws[Use AWS Key Management Service]' \
+'--gcp[Use Google Cloud Key Management Service]' \
+'--turnkey[Use Turnkey]' \
+'--browser[Use a browser wallet]' \
+'--browser-disable-open[Whether to open the browser for wallet connection]' \
+'--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -2474,13 +2540,17 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -2493,8 +2563,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'-c+[]:CHAIN:_default' \
-'--chain=[]:CHAIN:_default' \
 '*--override-balance=[Override the accounts balance. Format\: "address\:balance,address\:balance"]:ADDRESS:BALANCE:_default' \
 '*--override-nonce=[Override the accounts nonce. Format\: "address\:nonce,address\:nonce"]:ADDRESS:NONCE:_default' \
 '*--override-code=[Override the accounts code. Format\: "address\:code,address\:code"]:ADDRESS:CODE:_default' \
@@ -2615,13 +2683,17 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -2634,8 +2706,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'-c+[]:CHAIN:_default' \
-'--chain=[]:CHAIN:_default' \
 '*--override-balance=[Override the accounts balance. Format\: "address\:balance,address\:balance"]:ADDRESS:BALANCE:_default' \
 '*--override-nonce=[Override the accounts nonce. Format\: "address\:nonce,address\:nonce"]:ADDRESS:NONCE:_default' \
 '*--override-code=[Override the accounts code. Format\: "address\:code,address\:code"]:ADDRESS:CODE:_default' \
@@ -3049,7 +3119,7 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '(--legacy)--path=[The path of blob data to be sent]:BLOB_DATA_PATH:_files' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
@@ -3176,7 +3246,7 @@ _arguments "${_arguments_options[@]}" : \
 '--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
 '--nonce=[Nonce for the transaction]:NONCE:_default' \
 '(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
 '--access-list=[EIP-2930 access list]' \
 '(--legacy)--path=[The path of blob data to be sent]:BLOB_DATA_PATH:_files' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
@@ -3478,10 +3548,17 @@ never\:"Force disable color output"))' \
 ;;
 (send)
 _arguments "${_arguments_options[@]}" : \
-'()--data=[Raw hex-encoded data for the transaction. Used instead of \\\[SIG\\\] and \\\[ARGS\\\]]:DATA:_default' \
 '--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
 '--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
+'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
+'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
+'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
+'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
+'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
+'--nonce=[Nonce for the transaction]:NONCE:_default' \
+'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
@@ -3503,14 +3580,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
-'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
-'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
-'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
-'--nonce=[Nonce for the transaction]:NONCE:_default' \
-'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
-'--access-list=[EIP-2930 access list]' \
 '(--legacy)--path=[The path of blob data to be sent]:BLOB_DATA_PATH:_files' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
@@ -3520,6 +3589,9 @@ never\:"Force disable color output"))' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--async[Only print the transaction hash and exit immediately]' \
 '(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
+'--unlocked[Send via \`eth_sendTransaction\` using the \`--from\` argument or \$ETH_FROM as sender]' \
+'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
+'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -3535,9 +3607,6 @@ never\:"Force disable color output"))' \
 '--browser[Use a browser wallet]' \
 '--browser-disable-open[Whether to open the browser for wallet connection]' \
 '--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
-'--unlocked[Send via \`eth_sendTransaction\` using the \`--from\` argument or \$ETH_FROM as sender]' \
-'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
-'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -3610,10 +3679,17 @@ esac
 ;;
 (s)
 _arguments "${_arguments_options[@]}" : \
-'()--data=[Raw hex-encoded data for the transaction. Used instead of \\\[SIG\\\] and \\\[ARGS\\\]]:DATA:_default' \
 '--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
 '--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
+'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
+'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
+'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
+'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
+'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
+'--nonce=[Nonce for the transaction]:NONCE:_default' \
+'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'--access-list=[EIP-2930 access list]' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
@@ -3635,14 +3711,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
-'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
-'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
-'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
-'--nonce=[Nonce for the transaction]:NONCE:_default' \
-'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
-'--access-list=[EIP-2930 access list]' \
 '(--legacy)--path=[The path of blob data to be sent]:BLOB_DATA_PATH:_files' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
@@ -3652,6 +3720,9 @@ never\:"Force disable color output"))' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--async[Only print the transaction hash and exit immediately]' \
 '(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
+'--unlocked[Send via \`eth_sendTransaction\` using the \`--from\` argument or \$ETH_FROM as sender]' \
+'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
+'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -3667,9 +3738,6 @@ never\:"Force disable color output"))' \
 '--browser[Use a browser wallet]' \
 '--browser-disable-open[Whether to open the browser for wallet connection]' \
 '--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
-'--unlocked[Send via \`eth_sendTransaction\` using the \`--from\` argument or \$ETH_FROM as sender]' \
-'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
-'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -3800,6 +3868,23 @@ never\:"Force disable color output"))' \
 _arguments "${_arguments_options[@]}" : \
 '-B+[The block height to query at]:BLOCK:_default' \
 '--block=[The block height to query at]:BLOCK:_default' \
+'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
+'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
+'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
+'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
+'--nonce=[Nonce for the transaction]:NONCE:_default' \
+'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'--access-list=[EIP-2930 access list]' \
+'-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
+'--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
+'--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
+'--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
+'*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -3812,19 +3897,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
-'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
-'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
-'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
-'--nonce=[Nonce for the transaction]:NONCE:_default' \
-'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
-'--access-list=[EIP-2930 access list]' \
-'-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
-'--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
-'--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
-'--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
-'*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
 never\:"Force disable color output"))' \
@@ -3832,6 +3904,11 @@ never\:"Force disable color output"))' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--cost[Calculate the cost of a transaction using the network gas price]' \
+'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
+'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
+'-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
+'--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
+'--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -3844,11 +3921,6 @@ never\:"Force disable color output"))' \
 '--browser[Use a browser wallet]' \
 '--browser-disable-open[Whether to open the browser for wallet connection]' \
 '--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
-'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
-'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
-'-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
-'--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
-'--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -3924,6 +3996,23 @@ esac
 _arguments "${_arguments_options[@]}" : \
 '-B+[The block height to query at]:BLOCK:_default' \
 '--block=[The block height to query at]:BLOCK:_default' \
+'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
+'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
+'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
+'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
+'--nonce=[Nonce for the transaction]:NONCE:_default' \
+'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
+'(--legacy --blob)--auth=[EIP-7702 authorization list]:AUTH:_default' \
+'--access-list=[EIP-2930 access list]' \
+'-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
+'--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
+'--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
+'--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
+'*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
+'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
+'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
+'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
+'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -3936,19 +4025,6 @@ _arguments "${_arguments_options[@]}" : \
 '--password=[The keystore password]:PASSWORD:_default' \
 '--password-file=[The keystore password file path]:PASSWORD_FILE:_default' \
 '--browser-port=[Port for the browser wallet server]:PORT:_default' \
-'--gas-limit=[Gas limit for the transaction]:GAS_LIMIT:_default' \
-'--gas-price=[Gas price for legacy transactions, or max fee per gas for EIP1559 transactions, either specified in wei, or as a string with a unit type]:PRICE:_default' \
-'--priority-gas-price=[Max priority fee per gas for EIP1559 transactions]:PRICE:_default' \
-'--value=[Ether to send in the transaction, either specified in wei, or as a string with a unit type]:VALUE:_default' \
-'--nonce=[Nonce for the transaction]:NONCE:_default' \
-'(--legacy)--blob-gas-price=[Gas price for EIP-4844 blob transaction]:BLOB_PRICE:_default' \
-'(--legacy --blob)*--auth=[EIP-7702 authorization list]:AUTH:_default' \
-'--access-list=[EIP-2930 access list]' \
-'-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
-'--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
-'--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
-'--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
-'*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
 '--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
 always\:"Force color output"
 never\:"Force disable color output"))' \
@@ -3956,6 +4032,11 @@ never\:"Force disable color output"))' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--cost[Calculate the cost of a transaction using the network gas price]' \
+'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
+'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
+'-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
+'--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
+'--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -3968,11 +4049,6 @@ never\:"Force disable color output"))' \
 '--browser[Use a browser wallet]' \
 '--browser-disable-open[Whether to open the browser for wallet connection]' \
 '--browser-development[Enable development mode for the browser wallet. This relaxes certain security features for local development]' \
-'--legacy[Send a legacy transaction instead of an EIP1559 transaction]' \
-'(--legacy)--blob[Send a EIP-4844 blob transaction]' \
-'-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
-'--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
-'--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
 '(-q --quiet)*-v[Verbosity level of the log messages.]' \
 '(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
 '-q[Do not print log messages]' \
@@ -6462,50 +6538,6 @@ never\:"Force disable color output"))' \
 '::private_key_override -- If provided, the address will be derived from the specified private key:_default' \
 && ret=0
 ;;
-(derive)
-_arguments "${_arguments_options[@]}" : \
-'-a+[Number of accounts to display]:ACCOUNTS:_default' \
-'--accounts=[Number of accounts to display]:ACCOUNTS:_default' \
-'--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
-always\:"Force color output"
-never\:"Force disable color output"))' \
-'-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--insecure[Insecure mode\: display private keys in the terminal]' \
-'(-q --quiet)*-v[Verbosity level of the log messages.]' \
-'(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
-'-q[Do not print log messages]' \
-'--quiet[Do not print log messages]' \
-'(-q --quiet --color)--json[Format log messages as JSON]' \
-'(--json)--md[Format log messages as Markdown]' \
-'-h[Print help (see more with '\''--help'\'')]' \
-'--help[Print help (see more with '\''--help'\'')]' \
-':mnemonic -- The accounts will be derived from the specified mnemonic phrase:_default' \
-&& ret=0
-;;
-(d)
-_arguments "${_arguments_options[@]}" : \
-'-a+[Number of accounts to display]:ACCOUNTS:_default' \
-'--accounts=[Number of accounts to display]:ACCOUNTS:_default' \
-'--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
-always\:"Force color output"
-never\:"Force disable color output"))' \
-'-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--insecure[Insecure mode\: display private keys in the terminal]' \
-'(-q --quiet)*-v[Verbosity level of the log messages.]' \
-'(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
-'-q[Do not print log messages]' \
-'--quiet[Do not print log messages]' \
-'(-q --quiet --color)--json[Format log messages as JSON]' \
-'(--json)--md[Format log messages as Markdown]' \
-'-h[Print help (see more with '\''--help'\'')]' \
-'--help[Print help (see more with '\''--help'\'')]' \
-':mnemonic -- The accounts will be derived from the specified mnemonic phrase:_default' \
-&& ret=0
-;;
 (sign)
 _arguments "${_arguments_options[@]}" : \
 '-f+[The sender account]:ADDRESS:_default' \
@@ -6628,7 +6660,6 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
-'(--nonce)--self-broadcast[If set, indicates the authorization will be broadcast by the signing account itself. This means the nonce used will be the current nonce + 1 (to account for the transaction that will include this authorization)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -6682,7 +6713,6 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
-'(--nonce)--self-broadcast[If set, indicates the authorization will be broadcast by the signing account itself. This means the nonce used will be the current nonce + 1 (to account for the transaction that will include this authorization)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -6954,7 +6984,7 @@ never\:"Force disable color output"))' \
 '(--json)--md[Format log messages as Markdown]' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
-'::mnemonic_override -- If provided, the private key will be derived from the specified mnemonic phrase:_default' \
+'::mnemonic_override -- If provided, the private key will be derived from the specified menomonic phrase:_default' \
 '::mnemonic_index_or_derivation_path_override -- If provided, the private key will be derived using the specified mnemonic index (if integer) or derivation path:_default' \
 && ret=0
 ;;
@@ -6998,7 +7028,7 @@ never\:"Force disable color output"))' \
 '(--json)--md[Format log messages as Markdown]' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
-'::mnemonic_override -- If provided, the private key will be derived from the specified mnemonic phrase:_default' \
+'::mnemonic_override -- If provided, the private key will be derived from the specified menomonic phrase:_default' \
 '::mnemonic_index_or_derivation_path_override -- If provided, the private key will be derived using the specified mnemonic index (if integer) or derivation path:_default' \
 && ret=0
 ;;
@@ -7203,10 +7233,6 @@ _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
 (address)
-_arguments "${_arguments_options[@]}" : \
-&& ret=0
-;;
-(derive)
 _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
@@ -7559,50 +7585,6 @@ never\:"Force disable color output"))' \
 '::private_key_override -- If provided, the address will be derived from the specified private key:_default' \
 && ret=0
 ;;
-(derive)
-_arguments "${_arguments_options[@]}" : \
-'-a+[Number of accounts to display]:ACCOUNTS:_default' \
-'--accounts=[Number of accounts to display]:ACCOUNTS:_default' \
-'--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
-always\:"Force color output"
-never\:"Force disable color output"))' \
-'-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--insecure[Insecure mode\: display private keys in the terminal]' \
-'(-q --quiet)*-v[Verbosity level of the log messages.]' \
-'(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
-'-q[Do not print log messages]' \
-'--quiet[Do not print log messages]' \
-'(-q --quiet --color)--json[Format log messages as JSON]' \
-'(--json)--md[Format log messages as Markdown]' \
-'-h[Print help (see more with '\''--help'\'')]' \
-'--help[Print help (see more with '\''--help'\'')]' \
-':mnemonic -- The accounts will be derived from the specified mnemonic phrase:_default' \
-&& ret=0
-;;
-(d)
-_arguments "${_arguments_options[@]}" : \
-'-a+[Number of accounts to display]:ACCOUNTS:_default' \
-'--accounts=[Number of accounts to display]:ACCOUNTS:_default' \
-'--color=[The color of the log messages]:COLOR:((auto\:"Intelligently guess whether to use color output (default)"
-always\:"Force color output"
-never\:"Force disable color output"))' \
-'-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--insecure[Insecure mode\: display private keys in the terminal]' \
-'(-q --quiet)*-v[Verbosity level of the log messages.]' \
-'(-q --quiet)*--verbosity[Verbosity level of the log messages.]' \
-'-q[Do not print log messages]' \
-'--quiet[Do not print log messages]' \
-'(-q --quiet --color)--json[Format log messages as JSON]' \
-'(--json)--md[Format log messages as Markdown]' \
-'-h[Print help (see more with '\''--help'\'')]' \
-'--help[Print help (see more with '\''--help'\'')]' \
-':mnemonic -- The accounts will be derived from the specified mnemonic phrase:_default' \
-&& ret=0
-;;
 (sign)
 _arguments "${_arguments_options[@]}" : \
 '-f+[The sender account]:ADDRESS:_default' \
@@ -7725,7 +7707,6 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
-'(--nonce)--self-broadcast[If set, indicates the authorization will be broadcast by the signing account itself. This means the nonce used will be the current nonce + 1 (to account for the transaction that will include this authorization)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -7779,7 +7760,6 @@ never\:"Force disable color output"))' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
-'(--nonce)--self-broadcast[If set, indicates the authorization will be broadcast by the signing account itself. This means the nonce used will be the current nonce + 1 (to account for the transaction that will include this authorization)]' \
 '-i[Open an interactive prompt to enter your private key]' \
 '--interactive[Open an interactive prompt to enter your private key]' \
 '-l[Use a Ledger hardware wallet]' \
@@ -8051,7 +8031,7 @@ never\:"Force disable color output"))' \
 '(--json)--md[Format log messages as Markdown]' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
-'::mnemonic_override -- If provided, the private key will be derived from the specified mnemonic phrase:_default' \
+'::mnemonic_override -- If provided, the private key will be derived from the specified menomonic phrase:_default' \
 '::mnemonic_index_or_derivation_path_override -- If provided, the private key will be derived using the specified mnemonic index (if integer) or derivation path:_default' \
 && ret=0
 ;;
@@ -8095,7 +8075,7 @@ never\:"Force disable color output"))' \
 '(--json)--md[Format log messages as Markdown]' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
-'::mnemonic_override -- If provided, the private key will be derived from the specified mnemonic phrase:_default' \
+'::mnemonic_override -- If provided, the private key will be derived from the specified menomonic phrase:_default' \
 '::mnemonic_index_or_derivation_path_override -- If provided, the private key will be derived using the specified mnemonic index (if integer) or derivation path:_default' \
 && ret=0
 ;;
@@ -8300,10 +8280,6 @@ _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
 (address)
-_arguments "${_arguments_options[@]}" : \
-&& ret=0
-;;
-(derive)
 _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
@@ -8917,7 +8893,6 @@ never\:"Force disable color output"))' \
 ;;
 (run)
 _arguments "${_arguments_options[@]}" : \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '*-l+[Label addresses in the trace]:LABEL:_default' \
 '*--label=[Label addresses in the trace]:LABEL:_default' \
 '-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
@@ -8943,7 +8918,6 @@ never\:"Force disable color output"))' \
 '-t[Print out opcode traces]' \
 '--trace-printer[Print out opcode traces]' \
 '--quick[Executes the transaction only with the state from the previous block]' \
-'--replay-system-txes[Whether to replay system transactions]' \
 '--disable-labels[Disables the labels in the traces]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
@@ -8967,7 +8941,6 @@ never\:"Force disable color output"))' \
 ;;
 (r)
 _arguments "${_arguments_options[@]}" : \
-'--trace-depth=[Defines the depth of a trace]:TRACE_DEPTH:_default' \
 '*-l+[Label addresses in the trace]:LABEL:_default' \
 '*--label=[Label addresses in the trace]:LABEL:_default' \
 '-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
@@ -8993,7 +8966,6 @@ never\:"Force disable color output"))' \
 '-t[Print out opcode traces]' \
 '--trace-printer[Print out opcode traces]' \
 '--quick[Executes the transaction only with the state from the previous block]' \
-'--replay-system-txes[Whether to replay system transactions]' \
 '--disable-labels[Disables the labels in the traces]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
@@ -9785,18 +9757,11 @@ never\:"Force disable color output"))' \
 ;;
 (transfer)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -9815,8 +9780,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -9847,18 +9810,11 @@ never\:"Force disable color output"))' \
 ;;
 (t)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -9877,8 +9833,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -9909,18 +9863,11 @@ never\:"Force disable color output"))' \
 ;;
 (approve)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -9939,8 +9886,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -9971,18 +9916,11 @@ never\:"Force disable color output"))' \
 ;;
 (a)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10001,8 +9939,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10327,18 +10263,11 @@ never\:"Force disable color output"))' \
 ;;
 (mint)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10357,8 +10286,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10389,18 +10316,11 @@ never\:"Force disable color output"))' \
 ;;
 (m)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10419,8 +10339,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10451,18 +10369,11 @@ never\:"Force disable color output"))' \
 ;;
 (burn)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10481,8 +10392,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10512,18 +10421,11 @@ never\:"Force disable color output"))' \
 ;;
 (bu)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10542,8 +10444,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10723,18 +10623,11 @@ never\:"Force disable color output"))' \
 ;;
 (transfer)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10753,8 +10646,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10785,18 +10676,11 @@ never\:"Force disable color output"))' \
 ;;
 (t)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10815,8 +10699,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10847,18 +10729,11 @@ never\:"Force disable color output"))' \
 ;;
 (approve)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10877,8 +10752,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -10909,18 +10782,11 @@ never\:"Force disable color output"))' \
 ;;
 (a)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -10939,8 +10805,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -11265,18 +11129,11 @@ never\:"Force disable color output"))' \
 ;;
 (mint)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -11295,8 +11152,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -11327,18 +11182,11 @@ never\:"Force disable color output"))' \
 ;;
 (m)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -11357,8 +11205,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -11389,18 +11235,11 @@ never\:"Force disable color output"))' \
 ;;
 (burn)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -11419,8 +11258,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -11450,18 +11287,11 @@ never\:"Force disable color output"))' \
 ;;
 (bu)
 _arguments "${_arguments_options[@]}" : \
-'--confirmations=[The number of confirmations until the receipt is fetched]:CONFIRMATIONS:_default' \
-'--timeout=[Timeout for sending the transaction]:TIMEOUT:_default' \
-'--poll-interval=[Polling interval for transaction receipts (in seconds)]:POLL_INTERVAL:_default' \
 '-r+[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--rpc-url=[The RPC endpoint, default value is http\://localhost\:8545]:URL:_default' \
 '--jwt-secret=[JWT Secret for the RPC endpoint]:JWT_SECRET:_default' \
 '--rpc-timeout=[Timeout for the RPC request in seconds]:RPC_TIMEOUT:_default' \
 '*--rpc-headers=[Specify custom headers for RPC requests]:RPC_HEADERS:_default' \
-'-e+[The Etherscan (or equivalent) API key]:KEY:_default' \
-'--etherscan-api-key=[The Etherscan (or equivalent) API key]:KEY:_default' \
-'-c+[The chain name or EIP-155 chain ID]:CHAIN:_default' \
-'--chain=[The chain name or EIP-155 chain ID]:CHAIN:_default' \
 '-f+[The sender account]:ADDRESS:_default' \
 '--from=[The sender account]:ADDRESS:_default' \
 '--private-key=[Use the provided private key]:RAW_PRIVATE_KEY:_default' \
@@ -11480,8 +11310,6 @@ never\:"Force disable color output"))' \
 '-j+[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--threads=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
 '--jobs=[Number of threads to use. Specifying 0 defaults to the number of logical cores]:THREADS:_default' \
-'--async[Only print the transaction hash and exit immediately]' \
-'(--async)--sync[Wait for transaction receipt synchronously instead of polling. Note\: uses \`eth_sendTransactionSync\` which may not be supported by all clients]' \
 '-k[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--insecure[Allow insecure RPC connections (accept invalid HTTPS certificates)]' \
 '--flashbots[Use the Flashbots RPC URL with fast mode (<https\://rpc.flashbots.net/fast>)]' \
@@ -11998,10 +11826,6 @@ _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
 (address)
-_arguments "${_arguments_options[@]}" : \
-&& ret=0
-;;
-(derive)
 _arguments "${_arguments_options[@]}" : \
 && ret=0
 ;;
@@ -13702,7 +13526,6 @@ _cast__help__wallet_commands() {
 'new-mnemonic:Generates a random BIP39 mnemonic phrase' \
 'vanity:Generate a vanity address' \
 'address:Convert a private key to an address' \
-'derive:Derive accounts from a mnemonic' \
 'sign:Sign a message or typed data' \
 'sign-auth:EIP-7702 sign authorization' \
 'verify:Verify the signature of a message' \
@@ -13730,11 +13553,6 @@ _cast__help__wallet__change-password_commands() {
 _cast__help__wallet__decrypt-keystore_commands() {
     local commands; commands=()
     _describe -t commands 'cast help wallet decrypt-keystore commands' commands "$@"
-}
-(( $+functions[_cast__help__wallet__derive_commands] )) ||
-_cast__help__wallet__derive_commands() {
-    local commands; commands=()
-    _describe -t commands 'cast help wallet derive commands' commands "$@"
 }
 (( $+functions[_cast__help__wallet__import_commands] )) ||
 _cast__help__wallet__import_commands() {
@@ -14172,8 +13990,6 @@ _cast__wallet_commands() {
 'address:Convert a private key to an address' \
 'a:Convert a private key to an address' \
 'addr:Convert a private key to an address' \
-'derive:Derive accounts from a mnemonic' \
-'d:Derive accounts from a mnemonic' \
 'sign:Sign a message or typed data' \
 's:Sign a message or typed data' \
 'sign-auth:EIP-7702 sign authorization' \
@@ -14213,11 +14029,6 @@ _cast__wallet__decrypt-keystore_commands() {
     local commands; commands=()
     _describe -t commands 'cast wallet decrypt-keystore commands' commands "$@"
 }
-(( $+functions[_cast__wallet__derive_commands] )) ||
-_cast__wallet__derive_commands() {
-    local commands; commands=()
-    _describe -t commands 'cast wallet derive commands' commands "$@"
-}
 (( $+functions[_cast__wallet__help_commands] )) ||
 _cast__wallet__help_commands() {
     local commands; commands=(
@@ -14225,7 +14036,6 @@ _cast__wallet__help_commands() {
 'new-mnemonic:Generates a random BIP39 mnemonic phrase' \
 'vanity:Generate a vanity address' \
 'address:Convert a private key to an address' \
-'derive:Derive accounts from a mnemonic' \
 'sign:Sign a message or typed data' \
 'sign-auth:EIP-7702 sign authorization' \
 'verify:Verify the signature of a message' \
@@ -14254,11 +14064,6 @@ _cast__wallet__help__change-password_commands() {
 _cast__wallet__help__decrypt-keystore_commands() {
     local commands; commands=()
     _describe -t commands 'cast wallet help decrypt-keystore commands' commands "$@"
-}
-(( $+functions[_cast__wallet__help__derive_commands] )) ||
-_cast__wallet__help__derive_commands() {
-    local commands; commands=()
-    _describe -t commands 'cast wallet help derive commands' commands "$@"
 }
 (( $+functions[_cast__wallet__help__help_commands] )) ||
 _cast__wallet__help__help_commands() {
