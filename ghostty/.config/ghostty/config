@@ -9,7 +9,7 @@ font-family = "SF Mono"
 font-size = 14
 
 # theme
-# theme = light:GruvboxLightHard,dark:catppuccin-mocha
+# theme = light:Iterm2 Dark Background,dark:iTerm2 Tango Light
 theme = light:Catppuccin Mocha,dark:Catppuccin Mocha
 
 # window

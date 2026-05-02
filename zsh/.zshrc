@@ -29,6 +29,7 @@ alias gb="git branch"
 alias lines="git ls-files | xargs cat | wc -l"
 
 export EDITOR=nvim
+export PATH=~/.volta/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/.foundry/bin:$PATH
@@ -36,7 +37,6 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.bun/bin:$PATH
 export PATH=~/.yarn/bin:$PATH
 export PATH=~/.huff/bin:$PATH
-export PATH=~/.volta/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -63,3 +63,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
+
+# solidity-language-server
+export PATH="$HOME/.solidity-language-server/bin:$PATH"
